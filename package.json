@@ -1,0 +1,44 @@
+{
+  "name": "expensify",
+  "version": "1.0.0",
+  "description": "expense-keeping app using react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "live-server public/",
+    "build": "webpack",
+    "dev-server": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rayGreycloud/indecision-react.git"
+  },
+  "author": "rayGreycloud",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rayGreycloud/indecision-react/issues"
+  },
+  "homepage": "https://github.com/rayGreycloud/indecision-react#readme",
+  "dependencies": {
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-react": "^6.24.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-modal": "^2.2.2",
+    "validator": "^8.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "css-loader": "^0.28.4",
+    "live-server": "^1.2.0",
+    "node-sass": "^4.5.3",
+    "normalize.css": "^7.0.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.1.0",
+    "webpack-dev-server": "^2.5.1"
+  }
+}
