@@ -1,7 +1,7 @@
 import { createStore, combineReducers } from 'redux';
 
-import expensesReducers from '../reducers/expenses';
-import filtersReducers from '../reducers/filters';
+import expensesReducer from '../reducers/expenses';
+import filtersReducer from '../reducers/filters';
 
 export default () => {
   const store = createStore(
