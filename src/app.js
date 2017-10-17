@@ -20,19 +20,24 @@ store.subscribe(() => {
 });
 
 // Test
-const expenseOne = store.dispatch(addExpense({
+
+store.dispatch(addExpense({
   description: 'Water Bill',
-  amount: 100, 
+  amount: 30000, 
   createdAt: -1001
 }));
 
-const expenseTwo = store.dispatch(addExpense({
+store.dispatch(addExpense({
   description: 'Gas bill',
-  amount: 300,
+  amount: 20000,
   createdAt: 1001
 }));
 
-store.dispatch(setTextFilter('gas'));
+store.dispatch(addExpense({
+  description: 'Rent',
+  amount: 150000
+}));
+
 // End Test 
 
 const jsx = (
