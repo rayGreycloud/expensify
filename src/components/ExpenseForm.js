@@ -25,13 +25,15 @@ export default class ExpenseForm extends Component {
   onAmountChange = (e) => {
     const amount = e.target.value;
     // regex to enforce dollar format
-    if (amount.match(/^\d*(\.\d{0,2})?$/)) {
+    if (!amount || amount.match(/^\d{1,10}(\.\d{0,2})?$/)) {
       this.setState(() => ({ amount }));
     }
   };
   
   onDateChange = (createdAt) => {
-    this.setState(() => ({ createdAt }));
+    if (createAt) {
+      this.setState(() => ({ createdAt }));
+    }
   };
   
   onFocusChange = ({ focused }) => {
