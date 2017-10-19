@@ -4,10 +4,10 @@
   "description": "expense tracking app using react",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "live-server public/",
     "build": "webpack",
-    "dev-server": "webpack-dev-server"
+    "dev-server": "webpack-dev-server",
+    "test": "jest --colors"
   },
   "repository": {
     "type": "git",
@@ -41,6 +41,7 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "css-loader": "^0.28.4",
+    "jest": "^20.0.4",
     "live-server": "^1.2.0",
     "node-sass": "^4.5.3",
     "normalize.css": "^7.0.0",
