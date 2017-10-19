@@ -24,18 +24,19 @@ store.subscribe(() => {
 store.dispatch(addExpense({
   description: 'Water Bill',
   amount: 30000, 
-  createdAt: -1001
+  createdAt: 1508439500000
 }));
 
 store.dispatch(addExpense({
   description: 'Gas bill',
   amount: 20000,
-  createdAt: 1001
+  createdAt: 1507438600000
 }));
 
 store.dispatch(addExpense({
   description: 'Rent',
-  amount: 150000
+  amount: 150000,
+  createdAt: 1506329600000
 }));
 
 // End Test 
