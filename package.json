@@ -8,7 +8,6 @@
   },
   "main": "index.js",
   "scripts": {
-    "serve": "live-server public/",
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
@@ -59,8 +58,6 @@
     "enzyme-adapter-react-16": "^1.0.0",
     "enzyme-to-json": "^3.1.4",
     "jest": "^20.0.4",
-    "live-server": "^1.2.0",
-    "raf": "^3.3.2",
     "react-test-renderer": "^16.0.0",
     "webpack-dev-server": "^2.5.1"
   }
