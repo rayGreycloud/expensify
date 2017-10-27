@@ -1,6 +1,5 @@
 import * as firebase from 'firebase';
 
-// Initialize Firebase
 const config = {
   apiKey: "AIzaSyC0mDXDdvz2-c9JO7LuWkkN1gc4h8vdNLY",
   authDomain: "eexpensify.firebaseapp.com",
@@ -12,6 +11,6 @@ const config = {
 
 firebase.initializeApp(config);
 
-firebase.database().ref().set({
-  name: 'RayGreycloud'
-});
+const database = firebase.database();
+
+export { firebase, database as default };
