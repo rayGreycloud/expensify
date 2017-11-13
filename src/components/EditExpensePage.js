@@ -2,16 +2,30 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ExpenseForm from './ExpenseForm';
 import { startEditExpense, startRemoveExpense } from '../actions/expenses';
+import ExpenseModal from './ExpenseModal';
 
-export class EditExpensePage extends Component {
+export class EditExpensePage extends Component {  
+  state = {
+    modalIsOpen: undefined
+  };
+  
   onSubmit = (expense) => {
     this.props.startEditExpense(this.props.expense.id, expense);
-    this.props.history.push('/');          
+    this.props.history.push('/'); 
   };
   
   onRemove = () => {
+    this.setState(() => ({ modalIsOpen: true }));    
+  };
+  
+  onRemoveCancelled = () => {
+    this.setState(() => ({ modalIsOpen: false })); 
+  };
+  
+  onRemoveConfirmed = () => {
+    this.setState(() => ({ modalIsOpen: false }));
     this.props.startRemoveExpense({ id: this.props.expense.id });
-    this.props.history.push('/');
+    this.props.history.push('/');    
   };
   
   render() {
@@ -30,8 +44,14 @@ export class EditExpensePage extends Component {
           <button className="button button--secondary" onClick={this.onRemove}
           >
             Remove Expense
-          </button> 
-        </div>     
+          </button>
+        </div>
+        <ExpenseModal 
+          modalIsOpen={this.state.modalIsOpen}
+          description={this.props.expense.description}
+          onRemoveConfirmed={this.onRemoveConfirmed}
+          onRemoveCancelled={this.onRemoveCancelled}
+        />
       </div>
     );    
   }
