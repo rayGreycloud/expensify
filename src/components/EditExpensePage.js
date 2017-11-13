@@ -48,7 +48,6 @@ export class EditExpensePage extends Component {
         </div>
         <ExpenseModal 
           modalIsOpen={this.state.modalIsOpen}
-          onRequestClose={this.onRemoveCancelled}
           description={this.props.expense.description}
           onRemoveConfirmed={this.onRemoveConfirmed}
           onRemoveCancelled={this.onRemoveCancelled}

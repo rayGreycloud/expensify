@@ -18,8 +18,8 @@
 }
 
 .modal {
-  background: $light-blue;
-  color: $white;
+  background: $off-white;
+  border: 1px solid #cacccd;  
   max-width: 50rem;
   outline: none;
   padding: $l-size;
@@ -32,10 +32,14 @@
 }
 
 .modal__body {
-  font-size: 2rem;
+  font-size: $font-size-large;
   font-weight: 300;
   margin: 0 0 $l-size 0;
   word-break: break-all;
+  
+  span {
+    font-weight: 700;
+  }
 }
 
 .modal__buttons {

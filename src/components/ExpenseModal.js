@@ -9,8 +9,8 @@ const ExpenseModal = (props) => (
     closeTimeoutMS={200}
     className="modal"    
   >
-    <h3 className="modal__title">Are you sure?</h3>
-    <p className="modal__body">Please confirm removal of this expense: <strong>{props.description}</strong></p>
+    <h2 className="modal__title">Are you sure?</h2>
+    <p className="modal__body">Please confirm removal of this expense: <span>{props.description}</span></p>
     <div className="modal__buttons">
       <button className="button button--secondary" onClick={props.onRemoveCancelled}>Cancel</button>      
       <button className="button" onClick={props.onRemoveConfirmed}>Remove</button>    
