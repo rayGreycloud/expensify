@@ -1,8 +1,9 @@
-@import './base/settings';
+@import './abstracts/variables';
+
 @import './base/base';
-@import './components/box-layout';
+@import './base/typography';
+
 @import './components/button';
-@import './components/header';
 @import './components/content-container';
 @import './components/page-header';
 @import './components/input-group';
@@ -12,3 +13,8 @@
 @import './components/list';
 @import './components/loader';
 @import './components/modal';
+
+@import './layout/box-layout';
+@import './layout/header';
+
+@import './pages/home';
